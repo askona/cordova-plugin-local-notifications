@@ -1,3 +1,5 @@
+MY CHANGES - Fixed issue, when .on('click') is not working, https://github.com/katzer/cordova-plugin-local-notifications/issues/1682
+I fixed it by forcing reassigning notification delegate after app launch.
 
 <p align="left"><b><a href="https://github.com/katzer/cordova-plugin-local-notifications/tree/example-x">SAMPLE APP</a> :point_right:</b></p>
 
