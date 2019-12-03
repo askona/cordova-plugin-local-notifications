@@ -228,6 +228,20 @@ UNNotificationPresentationOptions const OptionAlert = UNNotificationPresentation
 }
 
 /**
+ * Reassign nofication delegate
+ *
+ * @return [ Void ]
+ */
+- (void) reassignNotificationsDelegate:(CDVInvokedUrlCommand*)command
+{
+    [self.commandDelegate runInBackground:^{
+        _center.delegate = self;
+        [self execCallback:command];
+    }];
+}
+
+
+/**
  * Get type of notification.
  *
  * @param [ Int ] id The ID of the notification.

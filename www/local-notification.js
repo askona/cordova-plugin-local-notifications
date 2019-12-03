@@ -211,6 +211,18 @@ exports.cancelAll = function (callback, scope) {
 };
 
 /**
+ * Reassigning notifications delegate
+ *
+ * @param [ Function ] callback The function to be exec as the callback.
+ * @param [ Object ]   scope    The callback function's scope.
+ *
+ * @return [ Void ]
+ */
+exports.reassignNotificationDelegate = function (callback, scope) {
+    this._exec('reassignNotificationsDelegate', null, callback, scope);
+};
+
+/**
  * Check if a notification is present.
  *
  * @param [ Int ]      id       The ID of the notification.
